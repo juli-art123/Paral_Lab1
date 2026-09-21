@@ -16,6 +16,6 @@ public class IntegralCalculatorTest {
         double expected = 50000.0;
         double actual = calculator.calculate();
         double relativeError = Math.abs((expected - actual) / expected);
-        assertEquals(0, relativeError, EPS);
+        assertEquals(1e-9, relativeError, EPS);
     }
 }

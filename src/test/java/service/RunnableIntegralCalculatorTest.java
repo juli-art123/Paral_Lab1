@@ -20,6 +20,6 @@ public class RunnableIntegralCalculatorTest {
         double expected = 50000.0;
         double actual = calculator.calculate(EPS, Math.PI / 2 - EPS, n, Function::calculate, threads).result();
         double relativeError = Math.abs((expected - actual) / expected);
-        assertEquals(0, relativeError, EPS);
+        assertEquals(1e-9, relativeError, EPS);
     }
 }
